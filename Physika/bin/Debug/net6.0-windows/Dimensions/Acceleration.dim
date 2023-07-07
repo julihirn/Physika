@@ -1,0 +1,154 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Acceleration"
+    def,str:DimSymbol="L/T^2"
+    def,str:Symbol="a"
+    def,str:VariableName="a"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:MeterPerSecondSquared{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Meter/Second²"
+        def,bol:CompositeUnit=true
+	    def,bol:CompositePrefix=true
+        def,bol:DivideComposite=true
+        def,str:Symbol="m"
+        def,str:SymbolB="s²"
+	def,str:PrefixEquationB="x^2"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:InchPerHourSecondSquared{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Foot Per Second Squared"
+        def,str:Symbol="ips²"
+        --Equations
+        def,str:ToBaseEq="(2.54*(10^(-2)))*x"
+        def,str:FromBaseEq="x/(2.54*(10^(-2)))"
+    }
+    def,parm:InchPerMinuteSecond{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Foot Per Minute/Second"
+        def,str:Symbol="ipm/s"
+        --Equations
+        def,str:ToBaseEq="(4.23333333333333333333*(10^(-4)))*x"
+        def,str:FromBaseEq="x/(4.23333333333333333333*(10^(-4)))"
+    }
+    def,parm:FootPerHourSecondSquared{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Foot Per Second Squared"
+        def,str:Symbol="fps²"
+        --Equations
+        def,str:ToBaseEq="(3.048*(10^(-1)))*x"
+        def,str:FromBaseEq="x/(3.048*(10^(-1)))"
+    }
+    def,parm:FootPerMinuteSecond{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Foot Per Minute/Second"
+        def,str:Symbol="fpm/s"
+        --Equations
+        def,str:ToBaseEq="(5.08*(10^(-3)))*x"
+        def,str:FromBaseEq="x/(5.08*(10^(-3)))"
+    }
+    def,parm:FootPerHourSecond{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Foot Per Hour/Second"
+        def,str:Symbol="fph/s"
+        --Equations
+        def,str:ToBaseEq="(8.46666666666666666666*(10^(-5)))*x"
+        def,str:FromBaseEq="x/(8.46666666666666666666*(10^(-5)))"
+    }
+    def,parm:KnotPerSecond{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Knot Per Second"
+        def,str:Symbol="kn/s"
+        --Equations
+        def,str:ToBaseEq="(5.144444444444444444444*(10^(-1)))*x"
+        def,str:FromBaseEq="x/(5.144444444444444444444*(10^(-1)))"
+    }
+    def,parm:MilePerSecondSquared{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Mile/Second"
+        def,str:Symbol="mps²"
+        --Equations
+        def,str:ToBaseEq="(1.609344*(10^3))*x"
+        def,str:FromBaseEq="x/(1.609344*(10^3))"
+    }
+    def,parm:MilePerMinutePerSecond{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Mile Per Minute Per Second"
+        def,str:Symbol="mpm/s"
+        --Equations
+        def,str:ToBaseEq="26.8224*x"
+        def,str:FromBaseEq="x/26.8224"
+    }
+    def,parm:MilePerHourPerSecond{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Mile Per Hour Per Second"
+        def,str:Symbol="mph/s"
+        --Equations
+        def,str:ToBaseEq="(4.4704*(10^(-1)))*x"
+        def,str:FromBaseEq="x/(4.4704*(10^(-1)))"
+    }
+    def,parm:StandardGravity{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Standard Gravity"
+        def,str:Symbol="g"
+        --Equations
+        def,str:ToBaseEq="9.80665*x"
+        def,str:FromBaseEq="x/9.80665"
+    }
+    def,parm:Galileo{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Galileo"
+        def,str:Symbol="Gal"
+        --Equations
+        def,str:ToBaseEq="(10^(-2))*x"
+        def,str:FromBaseEq="x/(10^(-2))"
+    }

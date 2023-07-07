@@ -1,0 +1,28 @@
+A - Area
+C - Capacit
+q - Charge
+I - Current
+V - voltage
+R - Resistance
+E - Energy
+F - Force
+f - Frequecy
+IL - Iluminance
+L - Inductance
+data - 
+x - length
+ilfx - Iluminance Flux
+ilv Luminous Intensity
+B - Mag Flux Dens
+ΦB - Mag Flux
+M - Mass
+θ - Angle
+P - Power
+p - pressure
+Rd - Rad Dose
+Ra - Rad Act
+θs - Solid Angle
+T - Temp
+t - Time
+v - Velocity
+vol - volume

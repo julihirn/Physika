@@ -1,0 +1,39 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Magnetic Flux"
+    def,str:DimSymbol="M*(L^2)*(T^(-3))/I"
+    def,str:VariableName="ΦB"
+    def,str:Symbol="Φ"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:Weber{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Weber"
+        def,str:Symbol="Wb"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:Maxwell{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Maxwell"
+        def,str:Symbol="Mx"
+        --Equations
+        def,str:ToBaseEq="x*(10^-8)"
+        def,str:FromBaseEq="x/(10^-8)"
+    }

@@ -1,0 +1,61 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Electric Charge"
+    def,str:DimSymbol="T*I"
+    def,str:Symbol="q"
+    def,str:VariableName="q"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:Coulomb{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Coulomb"
+        def,str:Symbol="C"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:Faraday{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Faraday"
+        def,str:Symbol="F"
+        --Equations
+        def,str:ToBaseEq="x*96485.3383"
+        def,str:FromBaseEq="x/96485.3383"
+    }
+    def,parm:Abcoulomb{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Abcoulomb"
+        def,str:Symbol="AbC"
+        --Equations
+        def,str:ToBaseEq="x*10"
+        def,str:FromBaseEq="x/10"
+    }
+    def,parm:Statcoulomb{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Statcoulomb"
+        def,str:Symbol="StatC"
+        --Equations
+        def,str:ToBaseEq="x*3.335641*(10^-10)"
+        def,str:FromBaseEq="x/(3.335641*(10^-10))"
+    }

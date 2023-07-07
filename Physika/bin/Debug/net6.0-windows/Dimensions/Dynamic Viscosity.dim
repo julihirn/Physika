@@ -1,0 +1,65 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Dynamic Viscosity"
+    def,str:DimSymbol="L^2/T"
+    def,str:Symbol="µ"
+    def,str:VariableName="η"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:PascalSecond{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Pascal Second"
+        def,bol:CompositeUnit=true
+	    def,bol:CompositePrefix=true
+        def,bol:DivideComposite=false
+        def,str:Symbol="Pa"
+        def,str:SymbolB="s"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:Poise{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Poise"
+        def,str:Symbol="P"
+        --Equations
+        def,str:ToBaseEq="0.1*x"
+        def,str:FromBaseEq="x/0.1"
+    }
+    def,parm:PoundPerFootHour{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Pound/Foot Hour"
+        def,str:Symbol="lb/(ft∙h)"
+        --Equations
+        def,str:ToBaseEq="(4.133789*(10^(-4)))*x"
+        def,str:FromBaseEq="x/(4.133789*(10^(-4)))"
+    }
+    def,parm:PoundPerFootSecond{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Pound/Foot Second"
+        def,str:Symbol="lb/(ft⋅s)"
+        --Equations
+        def,str:ToBaseEq="1.488164*x"
+        def,str:FromBaseEq="x/1.488164"
+    }

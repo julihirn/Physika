@@ -1,0 +1,54 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Kinematic Viscosity"
+    def,str:DimSymbol="L^2/T"
+    def,str:Symbol="ρ"
+    def,str:VariableName="μ"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:SquareMeterPerSecond{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Meters²/Second"
+        def,bol:CompositeUnit=true
+	    def,bol:CompositePrefix=true
+        def,bol:DivideComposite=true
+        def,str:Symbol="m²"
+        def,str:SymbolB="s"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:SquareFootPerSecond{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Foot²/Second"
+        def,str:Symbol="ft²/s"
+        --Equations
+        def,str:ToBaseEq="0.09290304*x"
+        def,str:FromBaseEq="x/(0.09290304)"
+    }
+    def,parm:Stokes{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Stokes"
+        def,str:Symbol="St"
+        --Equations
+        def,str:ToBaseEq="(10^(-4))*x"
+        def,str:FromBaseEq="x/(10^(-4))"
+    }

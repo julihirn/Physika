@@ -1,0 +1,50 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Electric Resistance"
+    def,str:DimSymbol="M*(L^2)*(T^(-3))/(I^2)"
+    def,str:Symbol="R"
+    def,str:VariableName="R"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:Ohm{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Ohm"
+        def,str:Symbol="Ω"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:Abohm{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Abohm"
+        def,str:Symbol="abΩ"
+        --Equations
+        def,str:ToBaseEq="x*(10^-9)"
+        def,str:FromBaseEq="x/(10^-9)"
+    }
+    def,parm:Statohm{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Statohm"
+        def,str:Symbol="statΩ"
+        --Equations
+        def,str:ToBaseEq="x*8.98755178*(10^11)"
+        def,str:FromBaseEq="x/(8.98755178*(10^11))"
+    }

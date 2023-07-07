@@ -1,0 +1,32 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Electric Conductivity"
+    def,str:DimSymbol="(M^(-1))*(L^(-3))*(T^3)*(I^2)"
+    def,str:Symbol="κ"
+    def,str:VariableName="κ"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:SiemensPerMeter{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Siemens/Meter"
+        def,bol:CompositeUnit=true
+	def,bol:CompositePrefix=true
+        def,bol:DivideComposite=true
+        def,str:Symbol="S"
+        def,str:SymbolB="m"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }

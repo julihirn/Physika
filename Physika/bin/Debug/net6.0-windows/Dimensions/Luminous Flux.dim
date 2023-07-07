@@ -1,0 +1,28 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Luminous Flux"
+    def,str:DimSymbol="J"
+    def,str:Symbol="Φ_v"
+    def,str:VariableName="ilfx"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:Lumen{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Lumen"
+        def,str:Symbol="lm"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }

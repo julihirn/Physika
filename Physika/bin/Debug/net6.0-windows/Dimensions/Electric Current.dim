@@ -1,0 +1,50 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Electric Current"
+    def,str:DimSymbol="I"
+    def,str:Symbol="I"
+    def,str:VariableName="I"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:Ampere{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Ampere"
+        def,str:Symbol="A"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:AbAmpere{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="AbAmpere"
+        def,str:Symbol="abA"
+        --Equations
+        def,str:ToBaseEq="x*10"
+        def,str:FromBaseEq="x/10"
+    }
+    def,parm:StatAmpere{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="StatAmpere"
+        def,str:Symbol="statA"
+        --Equations
+        def,str:ToBaseEq="x*3.33564*(10^(-10))"
+        def,str:FromBaseEq="x/(3.33564*(10^(-10)))"
+    }

@@ -1,0 +1,148 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Physika/1.0.0": {
+        "dependencies": {
+          "FCTB": "2.16.24",
+          "NETStandard.Library": "2.0.3",
+          "ODModules": "1.0.0",
+          "WindowsRibbon": "2.11.1",
+          "Fizzler": "1.3.0.0",
+          "ODContextualText": "2.16.26.0",
+          "ODHandlers": "1.0.0.0",
+          "Svg": "3.4.0.0"
+        },
+        "runtime": {
+          "Physika.dll": {}
+        }
+      },
+      "FCTB/2.16.24": {
+        "runtime": {
+          "lib/FastColoredTextBox.dll": {
+            "assemblyVersion": "2.16.24.0",
+            "fileVersion": "2.16.24.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "WindowsRibbon/2.11.1": {
+        "runtime": {
+          "lib/net6.0-windows7.0/Ribbon.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "2.11.1.0"
+          }
+        }
+      },
+      "ODModules/1.0.0": {
+        "dependencies": {
+          "Handlers": "1.0.0"
+        },
+        "runtime": {
+          "ODModules.dll": {}
+        }
+      },
+      "Fizzler/1.3.0.0": {
+        "runtime": {
+          "Fizzler.dll": {
+            "assemblyVersion": "1.3.0.0",
+            "fileVersion": "1.3.0.0"
+          }
+        }
+      },
+      "ODContextualText/2.16.26.0": {
+        "runtime": {
+          "ODContextualText.dll": {
+            "assemblyVersion": "2.16.26.0",
+            "fileVersion": "2.16.26.0"
+          }
+        }
+      },
+      "ODHandlers/1.0.0.0": {
+        "runtime": {
+          "ODHandlers.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Svg/3.4.0.0": {
+        "runtime": {
+          "Svg.dll": {
+            "assemblyVersion": "3.4.0.0",
+            "fileVersion": "3.4.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Physika/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FCTB/2.16.24": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7E+vfTh4kV4Cz9hkHehgbmJQh03EdaMWyjY3T9YA4snqI7Bi11zlAvJgyO5HNdkL+Znzas8yyYE9vuF+izxWQw==",
+      "path": "fctb/2.16.24",
+      "hashPath": "fctb.2.16.24.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "WindowsRibbon/2.11.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9DDhRAf2WqkrXzEmstigu4FLvEeJbK3xW9BQV7ULPi0Y0kb1WzM9RZtEmOL84tMC1h3MfDfVG+Gj4YUvSxT1HA==",
+      "path": "windowsribbon/2.11.1",
+      "hashPath": "windowsribbon.2.11.1.nupkg.sha512"
+    },
+    "ODModules/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Fizzler/1.3.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ODContextualText/2.16.26.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ODHandlers/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Svg/3.4.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

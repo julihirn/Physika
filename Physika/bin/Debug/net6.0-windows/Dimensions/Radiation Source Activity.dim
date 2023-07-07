@@ -1,0 +1,50 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Radiation Source Activity"
+    def,str:DimSymbol="T^(-1)"
+    def,str:Symbol="A"
+    def,str:VariableName="Ra"
+
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:Becquerel{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Becquerel"
+        def,str:Symbol="Bq"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:Curie{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Curie"
+        def,str:Symbol="Ci"
+        --Equations
+        def,str:ToBaseEq="x*3.7*(10^10)"
+        def,str:FromBaseEq="x/(3.7*(10^10))"
+    }
+    def,parm:Rutherford{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Rutherford"
+        def,str:Symbol="Rd"
+        --Equations
+        def,str:ToBaseEq="x*(10^6)"
+        def,str:FromBaseEq="x/(10^6)"
+    }

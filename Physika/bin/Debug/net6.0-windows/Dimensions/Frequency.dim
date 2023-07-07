@@ -1,0 +1,69 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Frequency"
+    def,str:DimSymbol="1/T"
+    def,str:VariableName="f"
+    def,str:Symbol="f"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:Hertz{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Hertz"
+        def,str:Symbol="Hz"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:ActionsPerMinute{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Actions Per Minute"
+        def,str:Symbol="APM"
+        --Equations
+        def,str:ToBaseEq="x/60"
+        def,str:FromBaseEq="60/x"
+    }
+    def,parm:CyclePerSecond{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Cycle Per Second"
+        def,str:Symbol="cps"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:DegreePerMinute{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Degree Per Minute"
+        def,str:Symbol="deg/s"
+        --Equations
+        def,str:ToBaseEq="x/360"
+        def,str:FromBaseEq="360/x"
+    }
+    def,parm:RadianPerMinute{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Radian Per Minute"
+        def,str:Symbol="rad/s"
+        --Equations
+        def,str:ToBaseEq="x/(2*pi)"
+        def,str:FromBaseEq="(2*pi)/x"
+    }

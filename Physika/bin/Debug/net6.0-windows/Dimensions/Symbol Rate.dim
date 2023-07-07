@@ -1,0 +1,58 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Symbol Rate"
+    def,str:DimSymbol="1/T"
+    def,str:VariableName="Bps"
+    def,str:Symbol="b/s"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:BitsPerSecond{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Bit/s"
+        def,bol:CompositeUnit=true
+	    def,bol:CompositePrefix=true
+        def,bol:DivideComposite=true
+        def,str:Symbol="b"
+        def,str:SymbolB="s"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:Baud{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Baud"
+        def,str:Symbol="Bd"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:BitsPerSecond{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Byte/s"
+        def,bol:CompositeUnit=true
+	    def,bol:CompositePrefix=true
+        def,bol:DivideComposite=true
+        def,str:Symbol="B"
+        def,str:SymbolB="s"
+        --Equations
+        def,str:ToBaseEq="8*x"
+        def,str:FromBaseEq="x/8"
+    }

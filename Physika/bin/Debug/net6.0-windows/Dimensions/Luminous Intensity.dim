@@ -1,0 +1,50 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Luminous Intensity"
+    def,str:DimSymbol="J"
+    def,str:Symbol="L_v"
+    def,str:VariableName="ilv"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:Candela{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Candela"
+        def,str:Symbol="cd"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:CandlePower{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Candle Power"
+        def,str:Symbol="cp"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:CandlePowerOld{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Candle Power (Old)"
+        def,str:Symbol="cp"
+        --Equations
+        def,str:ToBaseEq="x*0.981"
+        def,str:FromBaseEq="x/0.981"
+    }

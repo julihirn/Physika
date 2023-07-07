@@ -1,0 +1,39 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Name="Ohms Law"
+
+    def,parm:Eq0{
+        def,str:Output="V"
+        def,a(str):Equations={
+		    "I*R",
+            "P/I",
+            "(P*R)^(1/2)"
+	    }
+    }
+    def,parm:Eq1{
+        def,str:Output="I"
+        def,a(str):Equations={
+		    "V/R",
+            "P/V",
+            "(P/R)^(1/2)"
+	    }
+    }
+    def,parm:Eq2{
+        def,str:Output="R"
+        def,a(str):Equations={
+		    "V/I",
+            "P/(I^2)",
+            "(V^2)/P"
+	    }
+    }
+    def,parm:Eq3{
+        def,str:Output="P"
+        def,a(str):Equations={
+		    "(V^2)/R",
+            "(I^2)*R",
+            "V*I"
+	    }
+    }
+
+

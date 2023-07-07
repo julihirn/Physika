@@ -1,0 +1,196 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Area"
+    def,str:DimSymbol="L^2"
+    def,str:Symbol="A"
+    def,str:VariableName="A"
+
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:MetersSquared{
+        --Setup
+        def,bol:IsBase=True
+        def,bol:UsePrefixEquation=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Meters Squared"
+        def,str:Symbol="m²"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+
+        def,str:PrefixEquation="x^2"
+    }
+    def,parm:Acre{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Acre"
+        def,str:Symbol="ac"
+        --Equations
+        def,str:ToBaseEq="x*4046.8564224"
+        def,str:FromBaseEq="x/4046.8564224"
+    }
+    def,parm:Are{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Are"
+        def,str:Symbol="a"
+        --Equations
+        def,str:ToBaseEq="x*100"
+        def,str:FromBaseEq="x/100"
+    }
+    def,parm:Barn{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Barn"
+        def,str:Symbol="b"
+        --Equations
+        def,str:ToBaseEq="x*(10^(-28))"
+        def,str:FromBaseEq="x/(10^(-28))"
+    }
+    def,parm:Board{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Board"
+        def,str:Symbol="bd"
+        --Equations
+        def,str:ToBaseEq="x*(7.74192*(10^(-3)))"
+        def,str:FromBaseEq="x/(7.74192*(10^(-3)))"
+    }
+    def,parm:Cuerda{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Cuerda"
+        def,str:Symbol="cda"
+        --Equations
+        def,str:ToBaseEq="x*3930.395625"
+        def,str:FromBaseEq="x/3930.395625"
+    }
+    def,parm:Hectare{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Hectare"
+        def,str:Symbol="ha"
+        --Equations
+        def,str:ToBaseEq="x*10000"
+        def,str:FromBaseEq="x/10000"
+    }
+    def,parm:Rood{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Rood"
+        def,str:Symbol="ro"
+        --Equations
+        def,str:ToBaseEq="x*1011.7141056"
+        def,str:FromBaseEq="x/1011.7141056"
+    }
+    def,parm:SquareChain{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Square Chain"
+        def,str:Symbol="sq ch"
+        --Equations
+        def,str:ToBaseEq="x*404.68564224"
+        def,str:FromBaseEq="x/404.68564224"
+    }
+    def,parm:SquareFoot{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Square Foot"
+        def,str:Symbol="sq ft"
+        --Equations
+        def,str:ToBaseEq="x*(9.290304*(10^(-2)))"
+        def,str:FromBaseEq="x/(9.290304*(10^(-2)))
+    }
+    def,parm:SquareInch{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Square Inch"
+        def,str:Symbol="sq in"
+        --Equations
+        def,str:ToBaseEq="x*(6.4516*(10^(-4)))"
+        def,str:FromBaseEq="x/(6.4516*(10^(-4)))
+    }
+    def,parm:SquareGunter{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Square Link"
+        def,str:Symbol="sq lnk"
+        --Equations
+        def,str:ToBaseEq="x*(4.0468564224*(10^(-2)))"
+        def,str:FromBaseEq="x/(4.0468564224*(10^(-2)))
+    }
+    def,parm:SquareThou{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Square Thou"
+        def,str:Symbol="sq mil"
+        --Equations
+        def,str:ToBaseEq="x*(6.4516*(10^(-10)))"
+        def,str:FromBaseEq="x/(6.4516*(10^(-10)))
+    }
+    def,parm:SquareMile{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Square Mile"
+        def,str:Symbol="sq mi"
+        --Equations
+        def,str:ToBaseEq="x*(2.589988110336*(10^(6)))"
+        def,str:FromBaseEq="x/(2.589988110336*(10^(6)))
+    }
+    def,parm:SquareRod{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Square Rod"
+        def,str:Symbol="sq rd"
+        --Equations
+        def,str:ToBaseEq="x*(25.29285264)"
+        def,str:FromBaseEq="x/(25.29285264)
+    }
+    def,parm:SquareYard{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Square Yard"
+        def,str:Symbol="sq yd"
+        --Equations
+        def,str:ToBaseEq="x*(0.83612736)"
+        def,str:FromBaseEq="x/(0.83612736)
+    }

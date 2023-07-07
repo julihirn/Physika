@@ -1,0 +1,28 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Name="Frequency"
+
+    def,parm:Eq0{
+        def,str:Output="f"
+        def,a(str):Equations={
+		    "1/t",
+		"v/x"
+	    }
+    }
+    def,parm:Eq1{
+        def,str:Output="t"
+        def,a(str):Equations={
+		    "1/f",
+		"x/v"
+	    }
+    }
+    def,parm:Eq2{
+        def,str:Output="x"
+        def,a(str):Equations={
+		    "v/f",
+		"v*t"
+	    }
+	def,str:Name="Wave Length"
+	def,str:Symbol="λ"
+    }

@@ -1,0 +1,39 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Radiation Dosage"
+    def,str:DimSymbol="((L^2)*M))/(T^3)"
+    def,str:Symbol="D"
+    def,str:VariableName="Rd"
+
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:Gray{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Gray"
+        def,str:Symbol="Gy"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:Rad{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Rad"
+        def,str:Symbol="rad"
+        --Equations
+        def,str:ToBaseEq="x*0.01"
+        def,str:FromBaseEq="x/0.01"
+    }

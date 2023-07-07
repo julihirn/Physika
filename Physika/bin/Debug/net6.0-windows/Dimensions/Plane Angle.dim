@@ -1,0 +1,61 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Angle (Plane)"
+    def,str:DimSymbol="L/L"
+    def,str:Symbol="θ"
+    def,str:VariableName="θ"
+
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:Radian{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Radian"
+        def,str:Symbol="rad"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:Degree{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Degree"
+        def,str:Symbol="°"
+        --Equations
+        def,str:ToBaseEq="(x/180)*pi"
+        def,str:FromBaseEq="(180*x)/pi"
+    }
+    def,parm:Gradian{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Gradian"
+        def,str:Symbol="grad"
+        --Equations
+        def,str:ToBaseEq="(x/200)*pi"
+        def,str:FromBaseEq="(200*x)/pi"
+    }
+    def,parm:Turn{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Turn"
+        def,str:Symbol="τ"
+        --Equations
+        def,str:ToBaseEq="2*pi*x"
+        def,str:FromBaseEq="x/(2*pi)"
+    }

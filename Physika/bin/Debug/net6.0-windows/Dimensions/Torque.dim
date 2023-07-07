@@ -1,0 +1,80 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Torque"
+    def,str:DimSymbol="M*(L^2)*(T^(-2))"
+    def,str:Symbol="τ"
+    def,str:VariableName="τ"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:NewtonMeter{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Newton Meters"
+        def,bol:CompositeUnit=true
+	    def,bol:CompositePrefix=true
+        def,bol:DivideComposite=false
+        def,str:Symbol="N"
+        def,str:SymbolB="m"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:PoundForceFoot{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Pound Force Foot"
+        def,str:Symbol="lbf⋅ft"
+        --Equations
+        def,str:ToBaseEq="x*1.3558179483314004"
+        def,str:FromBaseEq="x/1.3558179483314004"
+    }
+    def,parm:PoundalFoot{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Poundal Foot"
+        def,str:Symbol="pdl⋅ft"
+        --Equations
+        def,str:ToBaseEq="x*(4.21401100938048*(10^(-2)))"
+        def,str:FromBaseEq="x/(4.21401100938048*(10^(-2)))"
+    }
+    def,parm:PoundForceFInch{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Pound Force Inch"
+        def,str:Symbol="lbf⋅in"
+        --Equations
+        def,str:ToBaseEq="x*0.1129848290276167"
+        def,str:FromBaseEq="x/0.1129848290276167"
+    }
+    def,parm:GramForceMeter{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Gram Force Meters"
+        def,bol:CompositeUnit=true
+	    def,bol:CompositePrefix=true
+        def,bol:DivideComposite=false
+        def,str:Symbol="gf"
+        def,str:SymbolB="m"
+        --Equations
+        def,str:ToBaseEq="x*0.00980665"
+        def,str:FromBaseEq="x/0.00980665"
+    }

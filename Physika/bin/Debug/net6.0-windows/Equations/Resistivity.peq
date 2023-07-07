@@ -1,0 +1,41 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Name="Resistivity"
+
+    def,parm:Eq0{
+        def,str:Output="ρe"
+        def,a(str):Equations={
+		    "(R*A)/x",
+            "1/κ"
+	    }
+    }
+    def,parm:Eq1{
+        def,str:Output="κ"
+         def,a(str):Equations={
+		    "x/(R*A)",
+            "1/ρe"
+	    }
+    }
+    def,parm:Eq2{
+        def,str:Output="R"
+        def,a(str):Equations={
+		    "(ρe*x)/A",
+            "x/(A*κ)"
+	    }
+    }
+    def,parm:Eq3{
+        def,str:Output="x"
+        def,a(str):Equations={
+		    "(R*A)/ρe",
+            "R*A*κ",
+	    }
+    }
+    def,parm:Eq4{
+        def,str:Output="A"
+        def,a(str):Equations={
+		    "(ρe*L)/R",
+            "L/(R*κ)"
+	    }
+    }
+

@@ -1,0 +1,113 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Density"
+    def,str:DimSymbol="M/(L^3)"
+    def,str:Symbol="ρ"
+    def,str:VariableName="ρ"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:GramPerCubicMeter{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Grams/Cubic Meter"
+        def,bol:CompositeUnit=true
+	    def,bol:CompositePrefix=true
+        def,bol:DivideComposite=true
+        def,str:Symbol="g"
+        def,str:SymbolB="m³"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:GramPerLitre{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Grams/Litre"
+        def,bol:CompositeUnit=true
+	    def,bol:CompositePrefix=true
+        def,bol:DivideComposite=true
+        def,str:Symbol="g"
+        def,str:SymbolB="L"
+        --Equations
+        def,str:ToBaseEq="1000*x"
+        def,str:FromBaseEq="x/1000"
+    }
+    def,parm:OuncePerCubicFoot{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Ounce/Foot³"
+        def,str:Symbol="oz/ft³"
+        --Equations
+        def,str:ToBaseEq="(1.001153961*(10^3))*x"
+        def,str:FromBaseEq="x/(1.001153961* (10^3))"
+    }
+    def,parm:OuncePerCubicInch{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Ounce/Inch³"
+        def,str:Symbol="oz/in³"
+        --Equations
+        def,str:ToBaseEq="1.729994044*(10^6)*x"
+        def,str:FromBaseEq="x/(1.729994044*(10^6))"
+    }
+    def,parm:OuncePerCubicGallon{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Ounce/Gallon³"
+        def,str:Symbol="oz/gal³"
+        --Equations
+        def,str:ToBaseEq="(6.236023291* (10^3))*x"
+        def,str:FromBaseEq="x/(6.236023291* (10^3))"
+    }
+    def,parm:PoundPerCubicFoot{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Pound/Foot³"
+        def,str:Symbol="lb/ft³"
+        --Equations
+        def,str:ToBaseEq="(16.01846337* (10^(3)))*x"
+        def,str:FromBaseEq="x/(16.01846337* (10^(3)))"
+    }
+    def,parm:PoundPerCubicInch{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Pound/Inch³"
+        def,str:Symbol="lb/in³"
+        --Equations
+        def,str:ToBaseEq="(2.767990471*(10^(7)))*x"
+        def,str:FromBaseEq="x/(2.767990471*(10^(7)))"
+    }
+    def,parm:PoundPerCubicGallon{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Pound/Gallon³"
+        def,str:Symbol="lb/gal³"
+        --Equations
+        def,str:ToBaseEq="(99.77637266* (10^(3)))*x"
+        def,str:FromBaseEq="x/(99.77637266* (10^(3)))"
+    }

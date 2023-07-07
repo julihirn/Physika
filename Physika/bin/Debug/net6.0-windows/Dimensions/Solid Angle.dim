@@ -1,0 +1,50 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Angle (Solid)"
+    def,str:DimSymbol="(L^2)/(L^2)"
+    def,str:Symbol="Ω"
+    def,str:VariableName="θs"
+
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+
+    def,parm:Steradian{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Steradian"
+        def,str:Symbol="sr"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:SquareDegree{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Square Degree"
+        def,str:Symbol="°²"
+        --Equations
+        def,str:ToBaseEq="((pi/180)^2)*x"
+        def,str:FromBaseEq="x/((pi/180)^2)"
+    }
+    def,parm:Spat{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Spat"
+        def,str:Symbol="sp"
+        --Equations
+        def,str:ToBaseEq="(4*pi)*x"
+        def,str:FromBaseEq="x/(4*pi)"
+    }

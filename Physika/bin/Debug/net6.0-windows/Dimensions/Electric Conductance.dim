@@ -1,0 +1,28 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Electric Conductance"
+    def,str:DimSymbol="(M^(-2))*(L^(-2))*(T^3)*(I^2)"
+    def,str:Symbol="G"
+    def,str:VariableName="G"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:Siemens{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Siemens"
+        def,str:Symbol="S"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }

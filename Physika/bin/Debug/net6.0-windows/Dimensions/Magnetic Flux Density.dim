@@ -1,0 +1,39 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Magnetic Flux Density"
+    def,str:DimSymbol="J"
+    def,str:Symbol="Φ_B"
+    def,str:VariableName="B"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:Tesla{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Tesla"
+        def,str:Symbol="T"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:Gauss{
+        --Setup
+        def,bol:IsBase=false
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Gauss"
+        def,str:Symbol="G"
+        --Equations
+        def,str:ToBaseEq="x*10^(-4)"
+        def,str:FromBaseEq="x/(10^(-4))"
+    }

@@ -1,0 +1,16 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Name="Crystal Capacitor"
+
+    def,parm:Eq0{
+        def,str:Output="C"
+        def,a(str):Equations={
+		"2*(C_1-C_2)"
+	}
+        def,a(str):VariableAliases={
+		"C_1=C",
+		"C_2=C"
+	}
+    }
+

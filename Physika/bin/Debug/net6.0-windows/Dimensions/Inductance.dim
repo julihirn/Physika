@@ -1,0 +1,28 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Inductance"
+    def,str:DimSymbol="M*(L^2))/((T^2)*(I^2))"
+    def,str:Symbol="L"
+    def,str:VariableName="L"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:Henry{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Henry"
+        def,str:Symbol="H"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }

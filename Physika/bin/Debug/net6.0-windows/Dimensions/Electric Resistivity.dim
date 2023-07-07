@@ -1,0 +1,32 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Electric Resistivity"
+    def,str:DimSymbol="M*(L^3)*(T^(-3))*(I^(-2))"
+    def,str:Symbol="ρ"
+    def,str:VariableName="ρe"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:OhmMeter{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Ohm Meters"
+        def,bol:CompositeUnit=true
+	def,bol:CompositePrefix=true
+        def,bol:DivideComposite=false
+        def,str:Symbol="Ω"
+        def,str:SymbolB="m"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }

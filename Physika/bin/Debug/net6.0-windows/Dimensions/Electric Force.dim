@@ -1,0 +1,50 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Electric Force"
+    def,str:DimSymbol="M*(L^2)*(T^(-3))/I"
+    def,str:Symbol="ℰ"
+    def,str:VariableName="V"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:Volt{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Volt"
+        def,str:Symbol="V"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:Abvolt{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Abvolt"
+        def,str:Symbol="abV"
+        --Equations
+        def,str:ToBaseEq="x*(10^-8)"
+        def,str:FromBaseEq="x/(10^-8)"
+    }
+    def,parm:Statvolt{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Statvolt"
+        def,str:Symbol="statV"
+        --Equations
+        def,str:ToBaseEq="x*299.792458"
+        def,str:FromBaseEq="x/299.792458"
+    }

@@ -1,0 +1,37 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Wire Gauge"
+    def,str:DimSymbol="T*I"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:MM2{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Coulomb"
+        def,str:Symbol="C"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:AWG{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Faraday"
+        def,str:Symbol="F"
+        --Equations
+        def,str:ToBaseEq="x*96485.3383"
+        def,str:FromBaseEq="x/96485.3383"
+    }

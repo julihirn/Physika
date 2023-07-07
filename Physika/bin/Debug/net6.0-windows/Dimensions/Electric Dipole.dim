@@ -1,0 +1,54 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Electric Dipole"
+    def,str:DimSymbol="I*T*L"
+    def,str:Symbol="q"
+    def,str:VariableName="ep"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:CoulombMeter{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Coulomb Meter"
+        def,bol:CompositeUnit=true
+	    def,bol:CompositePrefix=true
+        def,bol:DivideComposite=false
+        def,str:Symbol="C"
+        def,str:SymbolB="m"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:Debye{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Debye"
+        def,str:Symbol="D"
+        --Equations
+        def,str:ToBaseEq="(3.33564095*(10^(-30)))*x"
+        def,str:FromBaseEq="x/(3.33564095*(10^(-30)))"
+    }
+    def,parm:AtomicUnitEleDipoleMoment{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Atomic Unit of Electric Dipole Moment"
+        def,str:Symbol="ea0"
+        --Equations
+        def,str:ToBaseEq="(8.47835281*(10^(-30)))*x"
+        def,str:FromBaseEq="x/(8.47835281*(10^(-30)))"
+    }

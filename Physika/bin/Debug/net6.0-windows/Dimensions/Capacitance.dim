@@ -1,0 +1,51 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Capacitance"
+    def,str:DimSymbol="((I^2)*(T^4))/(M*L^(-2))"
+    def,str:VariableName="C"
+    def,str:Symbol="C"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:Farad{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Farad"
+        def,str:Symbol="F"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+        def,a(dec):range={    10,103}
+    }
+    def,parm:Abfarad{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Abfarad"
+        def,str:Symbol="abF"
+        --Equations
+        def,str:ToBaseEq="x*(10^(-9))"
+        def,str:FromBaseEq="x/(10^(-9))"
+    }
+    def,parm:Statfarad{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Statohm"
+        def,str:Symbol="statF"
+        --Equations
+        def,str:ToBaseEq="x*1.1126*(10^-12)"
+        def,str:FromBaseEq="x/(1.1126*(10^-12))"
+    }

@@ -1,0 +1,61 @@
+Begin,
+Create Lines(1),
+    
+    def,str:Dimension="Iluminance"
+    def,str:DimSymbol="L^(-2)*J"
+    def,str:Symbol="E_v"
+    def,str:VariableName="IL"
+    
+    def,str:BaseUnitVar="x"
+    def,str:OtherUnitVar="x"
+    
+    enum:Type{
+        SI
+        Imperial
+        Other
+    }
+    
+    def,parm:Lux{
+        --Setup
+        def,bol:IsBase=True
+        def,E(Type):UnitType=SI
+        --Unit
+        def,str:Name="Lux"
+        def,str:Symbol="lx"
+        --Equations
+        def,str:ToBaseEq="x"
+        def,str:FromBaseEq="x"
+    }
+    def,parm:FootCandle{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Imperial
+        --Unit
+        def,str:Name="Foot Candle"
+        def,str:Symbol="fc"
+        --Equations
+        def,str:ToBaseEq="x*10.76"
+        def,str:FromBaseEq="x/10.76"
+    }
+    def,parm:Phot{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Phot"
+        def,str:Symbol="ph"
+        --Equations
+        def,str:ToBaseEq="x*1000"
+        def,str:FromBaseEq="x/1000"
+    }
+    def,parm:Nox{
+        --Setup
+        def,bol:IsBase=False
+        def,E(Type):UnitType=Other
+        --Unit
+        def,str:Name="Nox"
+        def,str:Symbol="nx"
+        --Equations
+        def,str:ToBaseEq="x/1000"
+        def,str:FromBaseEq="x*1000"
+    }

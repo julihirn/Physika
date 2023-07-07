@@ -16,10 +16,72 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="bin\Debug\net6.0-windows\Physika.deps.json" />
+    <Content Include="bin\Debug\net6.0-windows\Physika.runtimeconfig.json" />
+    <Content Include="bin\Debug\net6.0-windows\Svg.xml" />
+    <Content Include="bin\Debug\net6.0-windows\VAR.txt" />
     <Content Include="Physika.ico" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Acceleration.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Area.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Capacitance.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Density.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Dynamic Viscosity.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Electric Charge.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Electric Conductance.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Electric Conductivity.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Electric Current.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Electric Dipole.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Electric Force.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Electric Resistance.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Electric Resistivity.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Energy.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Force.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Frequency.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Iluminance.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Inductance.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Information Entropy.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Kinematic Viscosity.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Length.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Luminance.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Luminous Flux.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Luminous Intensity.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Magnetic Flux Density.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Magnetic Flux.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Mass.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Plane Angle.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Power.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Pressure.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Radiation Dosage.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Radiation Source Activity.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Solid Angle.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Symbol Rate.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Temperature.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Time.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Torque.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Velocity.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Volume.dim" />
+    <None Include="bin\Debug\net6.0-windows\Dimensions\Wire Gauge.dimx" />
+    <None Include="bin\Debug\net6.0-windows\Equations\Crystal Capacitor.peq" />
+    <None Include="bin\Debug\net6.0-windows\Equations\Frequency.peq" />
+    <None Include="bin\Debug\net6.0-windows\Equations\Ohms Law.peq" />
+    <None Include="bin\Debug\net6.0-windows\Equations\Resistivity.peq" />
+    <None Include="bin\Debug\net6.0-windows\FastColoredTextBox.dll" />
+    <None Include="bin\Debug\net6.0-windows\Fizzler.dll" />
+    <None Include="bin\Debug\net6.0-windows\ODContextualText.dll" />
+    <None Include="bin\Debug\net6.0-windows\ODHandlers.dll" />
+    <None Include="bin\Debug\net6.0-windows\ODHandlers.pdb" />
+    <None Include="bin\Debug\net6.0-windows\ODModules.dll" />
+    <None Include="bin\Debug\net6.0-windows\ODModules.pdb" />
+    <None Include="bin\Debug\net6.0-windows\Physika.dll" />
+    <None Include="bin\Debug\net6.0-windows\Physika.dll.config" />
+    <None Include="bin\Debug\net6.0-windows\Physika.exe" />
+    <None Include="bin\Debug\net6.0-windows\Physika.pdb" />
+    <None Include="bin\Debug\net6.0-windows\Ribbon.dll" />
+    <None Include="bin\Debug\net6.0-windows\Svg.dll" />
+    <None Include="bin\Debug\net6.0-windows\Svg.pdb" />
     <None Include="E:\User Files\Pictures\Programs\One Desktop 2022\Physika.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
@@ -76,6 +138,10 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\Debug\net6.0-windows\ref\" />
   </ItemGroup>
 
 </Project>

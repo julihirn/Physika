@@ -26,7 +26,8 @@ Create Lines(1),
         def,bol:DivideComposite=true
         def,str:Symbol="m"
         def,str:SymbolB="s²"
-	def,str:PrefixEquationB="x^2"
+        def,bol:UsePrefixEquationB=True
+	    def,str:PrefixEquationB="x^2"
         --Equations
         def,str:ToBaseEq="x"
         def,str:FromBaseEq="x"

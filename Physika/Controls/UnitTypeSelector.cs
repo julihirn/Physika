@@ -22,10 +22,10 @@ namespace Physika.Controls {
         public UnitTypeSelector() {
             InitializeComponent();
 
-            if (mf == null) {
-                mf = new MyFilter();
-               Application.AddMessageFilter(mf);
-            }
+          if (mf == null) {
+              mf = new MyFilter();
+             Application.AddMessageFilter(mf);
+          }
 
             mf.MouseDown += new MyFilter.LeftButtonDown(mf_MouseDown);
             
@@ -41,16 +41,25 @@ namespace Physika.Controls {
         [DllImport("user32")]
         public static extern int ShowWindow
          (IntPtr hWnd, int nCmdShow);
+        [DllImport("user32.dll", EntryPoint = "GetDesktopWindow")]
+        public static extern IntPtr GetDesktopWindow();
 
 
         protected override CreateParams CreateParams {
             get {
-
+            
                 CreateParams p = base.CreateParams;
-                p.ExStyle |= (WS_EX_NOACTIVATE | WS_EX_TOOLWINDOW | WS_EX_TOPMOST);
+                p.ExStyle |= (WS_EX_TOOLWINDOW | WS_EX_TOPMOST);
                 p.Parent = IntPtr.Zero;
                 return p;
             }
+            //get {
+            //    var cp = base.CreateParams; // Retrieve the normal parameters.
+            //    cp.Style = 0x40000000 | 0x4000000; // WS_CHILD | WS_CLIPSIBLINGS
+            //    cp.ExStyle &= 0x00080000; // WS_EX_LAYERED
+            //    cp.Parent = GetDesktopWindow(); // Make "GetDesktopWindow()" from your own namespace.
+            //    return cp;
+            //}
         }
         public new void Show(Point ShowLocation, Size PopupSize) {
             if (this.Handle == IntPtr.Zero) base.CreateControl();
@@ -78,21 +87,21 @@ namespace Physika.Controls {
         //    }
         //    base.WndProc(ref m);
         //}
-        public bool PreFilterMessage(ref Message m) {
-            var mhwnd = m.HWnd;
-            if (m.Msg == WM_LBUTTONDOWN) {
-                //System.Diagnostics.Debug.WriteLine("BEEP!");
-                // get clicks OUTSİDE OF the control
-
-                if (Controls.Cast<Control>().All(x => x.Handle != mhwnd)) {
-                    // do your  what you wanna do here
-
-
-                    return true;  // handle click
-                }
-            }
-            return false;
-        }
+       //public bool PreFilterMessage(ref Message m) {
+       //    var mhwnd = m.HWnd;
+       //    if (m.Msg == WM_LBUTTONDOWN) {
+       //        //System.Diagnostics.Debug.WriteLine("BEEP!");
+       //        // get clicks OUTSİDE OF the control
+       //
+       //        if (Controls.Cast<Control>().All(x => x.Handle != mhwnd)) {
+       //            // do your  what you wanna do here
+       //
+       //
+       //            return true;  // handle click
+       //        }
+       //    }
+       //    return false;
+       //}
         private void buttonGrid1_Load(object sender, EventArgs e) {
 
         }
@@ -110,23 +119,23 @@ namespace Physika.Controls {
                 //}
             }
         }
-        private bool IsTargetMine(IntPtr target) {
-            return IsTargetMine(this, target);
-        }
-        private bool IsTargetMine(Control ctl, IntPtr target) {
-            foreach (Control child in ctl.Controls) {
-                if (child.Handle.Equals(target)) {
-                    return true;
-                }
-                else if (child.HasChildren) {
-                    bool result = IsTargetMine(child, target);
-                    if (result) {
-                        return true;
-                    }
-                }
-            }
-            return false;
-        }
+       //private bool IsTargetMine(IntPtr target) {
+       //    return IsTargetMine(this, target);
+       //}
+       //private bool IsTargetMine(Control ctl, IntPtr target) {
+       //    foreach (Control child in ctl.Controls) {
+       //        if (child.Handle.Equals(target)) {
+       //            return true;
+       //        }
+       //        else if (child.HasChildren) {
+       //            bool result = IsTargetMine(child, target);
+       //            if (result) {
+       //                return true;
+       //            }
+       //        }
+       //    }
+       //    return false;
+       //}
         private void mf_MouseDown() {
             if (this.Visible) {
                 if (!this.RectangleToScreen(this.ClientRectangle).Contains(System.Windows.Forms.Cursor.Position)) {
@@ -142,19 +151,19 @@ namespace Physika.Controls {
 
             //public delegate void KeyPressUp(IntPtr target);
             //public event KeyPressUp KeyUp;
-
+            private const int WM_KEYDWN = 0x100;
             private const int WM_KEYUP = 0x101;
             private const int WM_LBUTTONDOWN = 0x201;
 
             bool IMessageFilter.PreFilterMessage(ref Message m) {
                 switch (m.Msg) {
                     // raise our KeyUp() event whenever a key is released in our app
-                   //case WM_KEYUP:
-                   //    if (KeyUp != null) {
-                   //        KeyUp(m.HWnd);
-                   //    }
-                   //    break;
-                   //
+                    case WM_KEYDWN:
+                        //if (KeyUp != null) {
+                        //    KeyUp(m.HWnd);
+                        //}
+                        break;
+                    
                     // raise our MouseDown() event whenever the mouse is left clicked somewhere in our app
                     case WM_LBUTTONDOWN:
                         if (MouseDown != null) {

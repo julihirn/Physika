@@ -58,11 +58,11 @@
             this.labelPanel1.Location = new System.Drawing.Point(15, 68);
             this.labelPanel1.Name = "labelPanel1";
             this.labelPanel1.OverrideCollapseControl = false;
-            this.labelPanel1.Padding = new System.Windows.Forms.Padding(0, 37, 0, 0);
+            this.labelPanel1.Padding = new System.Windows.Forms.Padding(0, 18, 0, 0);
             this.labelPanel1.PanelCollapsible = false;
             this.labelPanel1.ResizeControl = ODModules.LabelPanel.ResizeDirection.None;
             this.labelPanel1.ShowCloseButton = false;
-            this.labelPanel1.Size = new System.Drawing.Size(402, 176);
+            this.labelPanel1.Size = new System.Drawing.Size(402, 122);
             this.labelPanel1.TabIndex = 1;
             this.labelPanel1.Text = "Unit";
             // 
@@ -74,7 +74,7 @@
             this.prefixScale1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.prefixScale1.InactiveForecolor = System.Drawing.SystemColors.GrayText;
             this.prefixScale1.LinkedNumericControl = this.numericTextbox1;
-            this.prefixScale1.Location = new System.Drawing.Point(0, 106);
+            this.prefixScale1.Location = new System.Drawing.Point(0, 52);
             this.prefixScale1.Name = "prefixScale1";
             this.prefixScale1.Size = new System.Drawing.Size(402, 70);
             this.prefixScale1.TabIndex = 1;
@@ -91,6 +91,7 @@
             this.numericTextbox1.AllowTyping = true;
             this.numericTextbox1.AutoSizeToText = true;
             this.numericTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.numericTextbox1.Base = ODModules.NumericTextbox.NumberBase.Base10;
             this.numericTextbox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.numericTextbox1.ButtonDownColor = System.Drawing.Color.Gray;
             this.numericTextbox1.ButtonHoverColor = System.Drawing.Color.LightGray;
@@ -104,9 +105,9 @@
             this.numericTextbox1.LabelFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.numericTextbox1.LabelForeColor = System.Drawing.Color.Gray;
             this.numericTextbox1.LabelText = "";
-            this.numericTextbox1.Location = new System.Drawing.Point(0, 37);
+            this.numericTextbox1.Location = new System.Drawing.Point(0, 18);
             this.numericTextbox1.MaxmiumDecimalPlaces = ((uint)(18u));
-            this.numericTextbox1.MinimumSize = new System.Drawing.Size(0, 69);
+            this.numericTextbox1.MinimumSize = new System.Drawing.Size(0, 34);
             this.numericTextbox1.Name = "numericTextbox1";
             this.numericTextbox1.NumericalFormat = ODModules.NumericTextbox.NumberFormat.Decimal;
             this.numericTextbox1.NumericalLeftRadixDigitsMaximum = 7;
@@ -119,7 +120,7 @@
             this.numericTextbox1.SelectedBackColor = System.Drawing.Color.Empty;
             this.numericTextbox1.SelectedBorderColor = System.Drawing.Color.MidnightBlue;
             this.numericTextbox1.ShowLabel = true;
-            this.numericTextbox1.Size = new System.Drawing.Size(402, 69);
+            this.numericTextbox1.Size = new System.Drawing.Size(402, 34);
             this.numericTextbox1.TabIndex = 0;
             this.numericTextbox1.Unit = "";
             this.numericTextbox1.Value = "0";
@@ -133,7 +134,7 @@
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(15, 244);
+            this.panel1.Location = new System.Drawing.Point(15, 190);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(402, 29);
             this.panel1.TabIndex = 2;
@@ -154,14 +155,14 @@
             this.labelPanel2.LabelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.labelPanel2.LabelFont = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelPanel2.LabelForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelPanel2.Location = new System.Drawing.Point(15, 273);
+            this.labelPanel2.Location = new System.Drawing.Point(15, 219);
             this.labelPanel2.Name = "labelPanel2";
             this.labelPanel2.OverrideCollapseControl = false;
-            this.labelPanel2.Padding = new System.Windows.Forms.Padding(0, 37, 0, 0);
+            this.labelPanel2.Padding = new System.Windows.Forms.Padding(0, 18, 0, 0);
             this.labelPanel2.PanelCollapsible = false;
             this.labelPanel2.ResizeControl = ODModules.LabelPanel.ResizeDirection.None;
             this.labelPanel2.ShowCloseButton = false;
-            this.labelPanel2.Size = new System.Drawing.Size(402, 156);
+            this.labelPanel2.Size = new System.Drawing.Size(402, 102);
             this.labelPanel2.TabIndex = 3;
             this.labelPanel2.Text = "Unit";
             // 
@@ -173,7 +174,7 @@
             this.prefixScale2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.prefixScale2.InactiveForecolor = System.Drawing.SystemColors.GrayText;
             this.prefixScale2.LinkedNumericControl = this.numericTextbox2;
-            this.prefixScale2.Location = new System.Drawing.Point(0, 106);
+            this.prefixScale2.Location = new System.Drawing.Point(0, 52);
             this.prefixScale2.Name = "prefixScale2";
             this.prefixScale2.Size = new System.Drawing.Size(402, 50);
             this.prefixScale2.TabIndex = 2;
@@ -189,6 +190,7 @@
             this.numericTextbox2.AllowTyping = true;
             this.numericTextbox2.AutoSizeToText = true;
             this.numericTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.numericTextbox2.Base = ODModules.NumericTextbox.NumberBase.Base10;
             this.numericTextbox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.numericTextbox2.ButtonDownColor = System.Drawing.Color.Gray;
             this.numericTextbox2.ButtonHoverColor = System.Drawing.Color.LightGray;
@@ -202,9 +204,9 @@
             this.numericTextbox2.LabelFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.numericTextbox2.LabelForeColor = System.Drawing.Color.Gray;
             this.numericTextbox2.LabelText = "";
-            this.numericTextbox2.Location = new System.Drawing.Point(0, 37);
+            this.numericTextbox2.Location = new System.Drawing.Point(0, 18);
             this.numericTextbox2.MaxmiumDecimalPlaces = ((uint)(6u));
-            this.numericTextbox2.MinimumSize = new System.Drawing.Size(0, 69);
+            this.numericTextbox2.MinimumSize = new System.Drawing.Size(0, 34);
             this.numericTextbox2.Name = "numericTextbox2";
             this.numericTextbox2.NumericalFormat = ODModules.NumericTextbox.NumberFormat.Scientific;
             this.numericTextbox2.NumericalLeftRadixDigitsMaximum = 16;
@@ -217,7 +219,7 @@
             this.numericTextbox2.SelectedBackColor = System.Drawing.Color.Empty;
             this.numericTextbox2.SelectedBorderColor = System.Drawing.Color.MidnightBlue;
             this.numericTextbox2.ShowLabel = true;
-            this.numericTextbox2.Size = new System.Drawing.Size(402, 69);
+            this.numericTextbox2.Size = new System.Drawing.Size(402, 34);
             this.numericTextbox2.TabIndex = 1;
             this.numericTextbox2.Unit = "a";
             this.numericTextbox2.Value = "0";

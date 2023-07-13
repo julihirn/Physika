@@ -26,8 +26,10 @@ namespace Physika.Classes {
                     string BaseSymbol = "";
                     string BaseSymbolB = "";
                     string BasePrefixEq = "x";
+                    string BasePrefixEqB = "x";
                     bool BaseCompositeAffectsPrefix = false;
                     bool BaseHasPrefixEq = false;
+                    bool BaseHasPrefixEqB = false;
 
                     bool BaseIsCompositeUnit = false;
                     bool BaseDivideComposite = false;
@@ -36,14 +38,22 @@ namespace Physika.Classes {
                     List<Unit> Units = new List<Unit>();
                     foreach (ParameterStructure Parm in DocumentHandler.PARM) {
                         bool HasPrefixEquation = false;
+                        bool HasPrefixEquationB = false;
                         bool CompositeAffectsPrefix = false;
                         string PrefixEquation = "x";
+                        string PrefixEquationB = "x";
                         CurrentIsBase = (bool)Parm.GetVariable("IsBase", true, DataType.BOL);
                         if (DocumentHandler.IsDefinedInParameter("UsePrefixEquation", Parm)) {
                             HasPrefixEquation = (bool)Parm.GetVariable("UsePrefixEquation", true, DataType.BOL);
                         }
+                        if (DocumentHandler.IsDefinedInParameter("UsePrefixEquationB", Parm)) {
+                            HasPrefixEquationB = (bool)Parm.GetVariable("UsePrefixEquationB", true, DataType.BOL);
+                        }
                         if (DocumentHandler.IsDefinedInParameter("PrefixEquation", Parm)) {
                             PrefixEquation = (string)Parm.GetVariable("PrefixEquation", true, DataType.STR);
+                        }
+                        if (DocumentHandler.IsDefinedInParameter("PrefixEquationB", Parm)) {
+                            PrefixEquationB = (string)Parm.GetVariable("PrefixEquationB", true, DataType.STR);
                         }
                         if (DocumentHandler.IsDefinedInParameter("CompositePrefix", Parm)) {
                             CompositeAffectsPrefix = (bool)Parm.GetVariable("CompositePrefix", true, DataType.BOL);
@@ -59,6 +69,10 @@ namespace Physika.Classes {
                             BaseSystem = CurrentSystem;
                             BasePrefixEq = PrefixEquation;
                             BaseHasPrefixEq = HasPrefixEquation;
+
+                            BasePrefixEqB = PrefixEquationB;
+                            BaseHasPrefixEqB = HasPrefixEquationB;
+
                             BaseCompositeAffectsPrefix = CompositeAffectsPrefix;
 
                             if (DocumentHandler.IsDefinedInParameter("CompositeUnit", Parm)) {
@@ -88,12 +102,12 @@ namespace Physika.Classes {
                             }
 
                             UnitConversionEquation Eq = new UnitConversionEquation(CurrentEqTo, CurrentEqFrom, PrefixEquation);
-                            Unit CurrentUnit = new Unit(CurrentName, CurrentSymbol, Eq, CurrentSystem, false, HasPrefixEquation, IsComp, CompositeAffectsPrefix, IsDiv, SymbolB);
+                            Unit CurrentUnit = new Unit(CurrentName, CurrentSymbol, Eq, CurrentSystem, false, HasPrefixEquation, IsComp, CompositeAffectsPrefix, IsDiv, SymbolB, HasPrefixEquationB);
                             Units.Add(CurrentUnit);
 
                         }
                     }
-                    Unit BaseUnit = new Unit(BaseName, BaseSymbol, new UnitConversionEquation("x", "x", BasePrefixEq), BaseSystem, true, BaseHasPrefixEq, BaseCompositeAffectsPrefix, BaseIsCompositeUnit, BaseDivideComposite, BaseSymbolB);
+                    Unit BaseUnit = new Unit(BaseName, BaseSymbol, new UnitConversionEquation("x", "x", BasePrefixEq, BasePrefixEqB), BaseSystem, true, BaseHasPrefixEq, BaseCompositeAffectsPrefix, BaseIsCompositeUnit, BaseDivideComposite, BaseSymbolB, BaseHasPrefixEqB);
                     string Dim = (string)DocumentHandler.GetVariable("Dimension", true, DataType.STR);
                     UnitType Dimension = new UnitType((string)DocumentHandler.GetVariable("Dimension", true, DataType.STR), BaseUnit, Units);
                     Dimension.Symbol = DocumentHandler.GetStringVariable("Symbol");
